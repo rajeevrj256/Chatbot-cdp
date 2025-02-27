@@ -8,9 +8,9 @@ st.set_page_config(page_title="Chatbot", layout="wide")
 
 # Sidebar for URL input and scraping
 with st.sidebar:
-    st.header("📂 Documentation Scraper")
-    base_url = st.text_input("Base URL", "https://docs.mparticle.com/")
-    start_url = st.text_input("Start URL", "https://docs.mparticle.com/developers/developersjourney/")
+    st.header("📂 Documentation Scraper(optional)")
+    base_url = st.text_input("Base URL", "")
+    start_url = st.text_input("Start URL", "")
     scrape_button = st.button("Scrape & Store Data")
 
     if scrape_button:
@@ -50,7 +50,7 @@ if query:
         for char in bot_response:
             response_text += char
             response_placeholder.markdown(response_text)
-            time.sleep(0.03)  # Slow typewriter effect
+            time.sleep(0.01)  # Slow typewriter effect
     
     # Store bot response
     st.session_state["messages"].append({"role": "assistant", "content": bot_response})
