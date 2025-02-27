@@ -1,9 +1,10 @@
 requests
-chromadb
+pinecone
 bs4
 langchain
 langchain_openai
-langchain_chroma
+langchain_pinecone
 python-dotenv
 dotenv
 streamlit
+langchain-community
